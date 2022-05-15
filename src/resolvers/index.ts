@@ -1,10 +1,16 @@
 // export * from './history';
 // export * from './repository';
 // export * from './user';
-import History from './history';
-import Repo from './repository';
+import history from './history';
+import repo from './repository';
 import User from './user';
 
-const resolvers = { ...History, ...Repo, ...User };
+const resolvers = {
+  Query: {
+    ...history,
+    ...repo,
+    ...User,
+  },
+};
 
 export default resolvers;

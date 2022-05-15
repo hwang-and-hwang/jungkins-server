@@ -3,8 +3,8 @@ import { gql } from 'apollo-server-fastify';
 const typeDefs = gql`
   type Query {
     userInfo(userId: ID!): User
-    History: [History]
-    Repo: [Repo]
+    history(repoId: ID!): History
+    repo(id: ID!): Repo
   }
 
   type User {
