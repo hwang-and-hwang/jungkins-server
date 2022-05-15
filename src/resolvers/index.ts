@@ -1,9 +1,3 @@
-import HNH from '../db';
-
-const tempResolvers = {
-  Query: {
-    teamMember: () => HNH,
-  },
-};
-
-export default tempResolvers;
+export * from './history';
+export * from './repository';
+export * from './user';

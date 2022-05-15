@@ -11,24 +11,25 @@ const typeDefs = gql`
   }
 
   type User {
-    userId: Int
+    userId: ID
     nickname: String
     email: String
     apiKey: String
   }
   type Repo {
-    repoId: Int
-    userId: Int
+    id: ID
+    repoId: ID
+    userId: ID
     repoName: String
     repoUrl: String
     repoBranch: String
     deployRepo: String
-    state: boolean
+    state: Boolean
   }
 
   type History {
-    id: Int
-    repoId: Int
+    id: ID
+    repoId: ID
     date: String
     state: String
   }
