@@ -1,8 +1,9 @@
-const repoResolvers = {
+import { repoList } from '../__db__/mock';
+
+const Repo = {
   Query: {
-    repoAll: () => console.log('git에 등록된 모든 repo 꺼내기'),
-    repo: (repoId: number) => console.log(repoId),
+    Repo: () => repoList,
   },
 };
 
-export default repoResolvers;
+export default Repo;

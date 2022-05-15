@@ -1,8 +1,9 @@
-const historyResolvers = {
+import { historyList } from '../__db__/mock';
+
+const History = {
   Query: {
-    historyAll: () => console.log('hi'),
-    history: (repoId: number) => console.log(repoId),
+    History: () => historyList,
   },
 };
 
-export default historyResolvers;
+export default History;

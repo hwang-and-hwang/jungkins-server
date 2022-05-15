@@ -1,7 +1,7 @@
 import fastify from 'fastify';
-import typeDefs from './schema';
-import * as resolvers from './resolvers';
 import { ApolloServer } from 'apollo-server-fastify';
+import resolvers from './resolvers';
+import typeDefs from './schema';
 
 const PORT = 5000;
 const app = fastify();
