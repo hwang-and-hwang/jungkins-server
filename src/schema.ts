@@ -2,33 +2,28 @@ import { gql } from 'apollo-server-fastify';
 
 const typeDefs = gql`
   type Query {
-    teamMember: [Person]
-  }
-
-  type Person {
-    name: String!
-    age: Int
+    
   }
 
   type User {
-    userId: ID
-    nickname: String
+    userId: ID!
+    nickname: String!
     email: String
     apiKey: String
   }
   type Repo {
-    id: ID
+    id: ID!
     repoId: ID
     userId: ID
-    repoName: String
-    repoUrl: String
+    repoName: String!
+    repoUrl: String!
     repoBranch: String
     deployRepo: String
-    state: Boolean
+    state: Boolean!
   }
 
   type History {
-    id: ID
+    id: ID!
     repoId: ID
     date: String
     state: String
