@@ -94,10 +94,7 @@ export const historyList: modelTypes["History"][] = [
 ];
 
 export default {
-  // User: userList,
-  // Repository: repoList,
-  // History: historyList,
-  getUser: async () => userList,
-  getRepository: async () => repoList,
-  getHistory: async () => historyList,
+  User: async () => userList,
+  Repository: async () => repoList,
+  History: async () => historyList,
 };

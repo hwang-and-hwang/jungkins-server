@@ -19,7 +19,7 @@ export type getParams<T extends tableNames> = {
 }
 export const get = async <T extends tableNames>({ table, params } : getParams<T>) : Promise<modelTypes[T][]> => {
     // TODO: replace real db
-    const result = await DB.getUser() as modelTypes[T][];
+    const result = await DB[table]() as modelTypes[T][];
     if(!params) return result;
     return result.filter((data) => {
         for(const [key, value] of Object.entries(params)) {
