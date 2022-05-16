@@ -1,4 +1,6 @@
-export const userList = [
+import {modelTypes} from "./index";
+
+export const userList: modelTypes['User'][] = [
   {
     userId: 'ss11234',
     nickname: 'jaetaek',
@@ -25,7 +27,7 @@ export const userList = [
   },
 ];
 
-export const repoList = [
+export const repoList: modelTypes['Repository'][] = [
   {
     id: 'hehhehehehheh',
     userId: 'ss11234',
@@ -64,7 +66,7 @@ export const repoList = [
   },
 ];
 
-export const historyList = [
+export const historyList: modelTypes["History"][] = [
   {
     id: '5676576575',
     repoId: 'hehhehehehheh',
@@ -90,3 +92,12 @@ export const historyList = [
     state: 'ready',
   },
 ];
+
+export default {
+  // User: userList,
+  // Repository: repoList,
+  // History: historyList,
+  getUser: async () => userList,
+  getRepository: async () => repoList,
+  getHistory: async () => historyList,
+};

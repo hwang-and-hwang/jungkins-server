@@ -1,9 +1,13 @@
 import { User } from '../models/types';
-import { userList } from '../__db__/mock';
+import { get, tableNames } from "../__db__";
+
+const USER: tableNames = 'User';
 
 const User = {
-  userInfo: (params: any, args: { userId: string }, context: any, info: any) =>
-    userList.filter((user: User) => user.userId === args.userId)[0],
+  userInfo: async (params: any, args: { userId: string }) => {
+    const result = await get({ table: USER });
+    return result.filter((user: User) => user.userId === args.userId)[0];
+  },
 };
 
 export default User;

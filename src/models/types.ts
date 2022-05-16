@@ -5,7 +5,7 @@ export type User = {
   apiKey?: string;
 };
 
-export type Repo = {
+export type Repository = {
   id: string;
   userId?: string;
   repoName: string;
