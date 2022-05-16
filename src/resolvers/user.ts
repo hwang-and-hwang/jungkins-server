@@ -5,7 +5,7 @@ const USER: tableNames = 'User';
 
 const User = {
   userInfo: async (params: any, args: { userId: string }) => {
-    const result = await get({ table: USER });
+    const result = await get<typeof USER>({ table: USER });
     return result.filter((user: User) => user.userId === args.userId)[0];
   },
 };
