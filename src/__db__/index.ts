@@ -1,5 +1,7 @@
 import DB from './mock';
-import { User, Repository, History } from "../models/types";
+import { User } from '../models/User';
+import { Repository } from "../models/Repository";
+import { History } from "../models/History";
 
 /*
     General Interface for Database.
