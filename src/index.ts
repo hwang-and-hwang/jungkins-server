@@ -12,7 +12,7 @@ app.register(cors, {
   origin: (origin, cb) => {
     const hostname = new URL(origin).hostname;
     const allowedHostnameRegEx = /(localhost|127.0.0.[\d])/gi;
-    if(!allowedHostnameRegEx.test(hostname)) {
+    if(allowedHostnameRegEx.test(hostname)) {
       cb(null, true);
       return;
     }
