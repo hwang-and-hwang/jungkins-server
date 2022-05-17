@@ -7,9 +7,14 @@ import User from './user';
 
 const resolvers = {
   Query: {
-    ...history,
-    ...repo,
-    ...User,
+    ...history.Query,
+    ...repo.Query,
+    ...User.Query,
+  },
+  Mutation: {
+    ...history.Mutation,
+    ...repo.Mutation,
+    ...User.Mutation,
   },
 };
 
