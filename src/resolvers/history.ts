@@ -10,7 +10,7 @@ const history = {
       return result.filter((history: History) => history.repoId === args.repoId)[0];
     },
   },
-  Mutation: {},
+  // Mutation: {},
 };
 
 export default history;

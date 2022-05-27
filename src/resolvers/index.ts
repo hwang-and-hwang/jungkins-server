@@ -11,11 +11,11 @@ const resolvers = {
     ...repo.Query,
     ...User.Query,
   },
-  Mutation: {
-    ...history.Mutation,
-    ...repo.Mutation,
-    ...User.Mutation,
-  },
+  // Mutation: {
+  //   ...history.Mutation,
+  //   ...repo.Mutation,
+  //   ...User.Mutation,
+  // },
 };
 
 export default resolvers;

@@ -10,7 +10,7 @@ const repo = {
       return result.filter((repo: Repository) => repo.id === args.id)[0];
     },
   },
-  Mutation: {},
+  // Mutation: {},
 };
 
 export default repo;

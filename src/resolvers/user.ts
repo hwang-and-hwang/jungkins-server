@@ -10,7 +10,7 @@ const User = {
       return result.filter((user: User) => user.userId === args.userId)[0];
     },
   },
-  Mutation: {},
+  // Mutation: {},
 };
 
 export default User;
