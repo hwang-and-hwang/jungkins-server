@@ -1,9 +1,16 @@
-import { History } from '../models/types';
-import { historyList } from '../__db__/mock';
+import { History } from '../models/History';
+import { get, tableNames } from '../__db__';
+
+const HISTORY: tableNames = 'History';
 
 const history = {
-  history: (params: any, args: { repoId: string }, context: any, info: any) =>
-    historyList.filter((history: History) => history.repoId === args.repoId)[0],
+  Query: {
+    history: async (params: any, args: { repoId: string }) => {
+      const result = await get<typeof HISTORY>({ table: HISTORY });
+      return result.filter((history: History) => history.repoId === args.repoId)[0];
+    },
+  },
+  // Mutation: {},
 };
 
 export default history;

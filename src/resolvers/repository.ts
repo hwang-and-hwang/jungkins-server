@@ -1,9 +1,16 @@
-import { Repo } from '../models/types';
-import { repoList } from '../__db__/mock';
+import { Repository } from '../models/Repository';
+import { get, tableNames } from '../__db__';
+
+const REPOSITORY: tableNames = 'Repository';
 
 const repo = {
-  repo: (params: any, args: { id: string }, context: any, info: any) =>
-    repoList.filter((repo: Repo) => repo.id === args.id)[0],
+  Query: {
+    repo: async (params: any, args: { id: string }) => {
+      const result = await get<typeof REPOSITORY>({ table: REPOSITORY });
+      return result.filter((repo: Repository) => repo.id === args.id)[0];
+    },
+  },
+  // Mutation: {},
 };
 
 export default repo;
