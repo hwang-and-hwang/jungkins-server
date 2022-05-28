@@ -1,5 +1,5 @@
-import { Repository } from '../models/Repository';
 import { get, tableNames } from '../__db__';
+import { Repository } from '../models/Repository';
 
 const REPOSITORY: tableNames = 'Repository';
 

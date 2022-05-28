@@ -1,7 +1,7 @@
 export const build = async () => {
-    return;
+  return;
 };
 
 export const deploy = async () => {
-    return;
+  return;
 };

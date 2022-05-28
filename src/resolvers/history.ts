@@ -1,5 +1,5 @@
-import { History } from '../models/History';
 import { get, tableNames } from '../__db__';
+import { History } from '../models/History';
 
 const HISTORY: tableNames = 'History';
 

@@ -1,4 +1,4 @@
-import {modelTypes} from "./index";
+import { modelTypes } from './index';
 
 export const userList: modelTypes['User'][] = [
   {
@@ -66,7 +66,7 @@ export const repoList: modelTypes['Repository'][] = [
   },
 ];
 
-export const historyList: modelTypes["History"][] = [
+export const historyList: modelTypes['History'][] = [
   {
     id: '5676576575',
     repoId: 'hehhehehehheh',

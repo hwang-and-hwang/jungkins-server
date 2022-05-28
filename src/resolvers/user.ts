@@ -1,5 +1,5 @@
-import { User } from '../models/User';
 import { get, tableNames } from '../__db__';
+import { User } from '../models/User';
 
 const USER: tableNames = 'User';
 
