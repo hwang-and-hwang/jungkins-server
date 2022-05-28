@@ -1,6 +1,7 @@
-import fastify from 'fastify';
-import { ApolloServer } from 'apollo-server-fastify';
 import cors from '@fastify/cors';
+import { ApolloServer } from 'apollo-server-fastify';
+import fastify from 'fastify';
+
 import resolvers from './resolvers';
 import typeDefs from './schema';
 
