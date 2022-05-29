@@ -7,7 +7,7 @@
     "start": "node server",
     "build": "tsc",
     "watch:ts": "tsc -w",
-    "dev": "npm run build:ts && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"yellow.bold,cyan.bold\" \"npm:watch:ts\" \"npm:dev:start\"",
+    "dev": "npm run build && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"yellow.bold,cyan.bold\" \"npm:watch:ts\" \"npm:dev:start\"",
     "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js"
   },
   "keywords": [],
@@ -18,7 +18,8 @@
     "@fastify/sensible": "^4.0.0",
     "fastify": "^3.0.0",
     "fastify-cli": "^3.1.0",
-    "fastify-plugin": "^3.0.0"
+    "fastify-plugin": "^3.0.0",
+    "mongoose": "^6.3.4"
   },
   "devDependencies": {
     "@types/node": "^17.0.8",
