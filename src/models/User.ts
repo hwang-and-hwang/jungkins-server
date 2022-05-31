@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   brand: String,
   price: String,
   age: Number,
-  owner_id: ObjectId,
+  user_id: ObjectId,
 });
 
 export default mongoose.model('User', userSchema);
