@@ -11,6 +11,14 @@ const getUser = async (req: FastifyRequest) => {
   }
 };
 
+const getUsers = async (req: FastifyRequest) => {
+  try {
+    return await User.find();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const addUser = async (req: FastifyRequest) => {
   try {
     const user = new User(req);
@@ -21,4 +29,4 @@ const addUser = async (req: FastifyRequest) => {
   }
 };
 
-export default { getUser, addUser };
+export default { getUser, getUsers, addUser };
