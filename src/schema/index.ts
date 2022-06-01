@@ -1,6 +1,7 @@
 import {
   GraphQLID,
   GraphQLInt,
+  GraphQLList,
   GraphQLNonNull,
   GraphQLObjectType,
   GraphQLSchema,
@@ -27,6 +28,13 @@ const RootQuery = new GraphQLObjectType({
       args: { id: { type: GraphQLID } },
       async resolve(parent, args) {
         return await userController.getUser(args);
+      },
+    },
+    users: {
+      type: new GraphQLList(userType),
+      args: {},
+      async resolve(parent, args) {
+        return await userController.getUsers(args);
       },
     },
   },
