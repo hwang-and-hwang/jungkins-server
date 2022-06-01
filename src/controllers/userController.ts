@@ -1,9 +1,24 @@
+import { FastifyRequest } from 'fastify';
+
 import User from '../models/User';
 
-export const getUser = async () => {
+const getUser = async (req: FastifyRequest) => {
   try {
-    return await User.find();
+    const id = req.id;
+    return await User.findById(id);
   } catch (error) {
     console.log(error);
   }
 };
+
+const addUser = async (req: FastifyRequest) => {
+  try {
+    const user = new User(req);
+    const newUser = await user.save();
+    return newUser;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export default { getUser, addUser };
