@@ -22,6 +22,7 @@
     "fastify-gql": "^5.8.2",
     "fastify-plugin": "^3.0.0",
     "graphql": "^16.5.0",
+    "mercurius": "^9.7.0",
     "mongoose": "^6.3.4"
   },
   "devDependencies": {
